@@ -369,15 +369,15 @@ footer {
        ;
     }
     /* MY PROCESS - Responsive ***************************************/
-    /* scale all illustrations in grid to 50% */
+    /* scale all illustrations */
     .myProcess img {
-        width: 50%;
+        width: 100%;
     }
 
     /* Readjusting grid for My Process Section */
     .processGrid {
         grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
         grid-template-areas: 
         "discover   line1   explainAB      line2       define"
         ".          .       .              line3       ."
@@ -396,7 +396,8 @@ footer {
     margin: auto auto;
     }
 
-    
+    #line3 {transform: rotate(-45deg);}
+    #line4 {transform: rotate(-45deg);margin-right: auto;}
     
 
     /* Adjust portfolio section for landscape */
