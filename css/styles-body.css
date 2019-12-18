@@ -159,7 +159,7 @@
     display: inline-block;
     background-color: #023246;
     width: 16px;
-    height: 64px;
+    height: 4rem;
     margin-right: 8px;
 }
 .portfolio h3 { 
@@ -184,8 +184,16 @@
 }
 /* covers */
 .cover img {
+    display: inline-block;
     width: 100%;
 }
+
+/* layout the entry section, image on left, text/button on right */
+.cover {
+    display: flex;
+    justify-content: space-between;
+}
+
 #wrcdvCover {
     grid-area: wrcdvCover;
 }
@@ -244,8 +252,10 @@
     width: 100%;
 }
 
-.about-me{
+#aboutMeTitle {
     display: block;
+    color: #023246;
+    grid-area: aboutMeTitle;
 
 }
 .about h2 {
@@ -256,34 +266,47 @@
     font-size: 14px;
     font-weight: 300;
 }
-.about-container {
+/* .about-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 40px;
+} */
+
+
+
+/* sizing the illustration pics */
+.illustration {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 8px;
 }
-
-
-    .whyux {
+    /* breathing room after text blocks */
+    .abBlocks { 
+        margin-top: 0px;   
+        margin-bottom: 32px; 
+        display: inline-block;
+    }
+   
+    /* include padding in max-width */
+    /* .whyux {
         max-width: 33.333%;
         min-width: 300px;
-        /* padding-right: 10px; */
-        box-sizing: border-box; /* include padding in max-width */
+        box-sizing: border-box; 
     }
       
     .influence {
         max-width: 33.333%;
         min-width: 300px;
-        /* padding: 0 10px; */
-        box-sizing: border-box; /* include padding in max-width */
+        box-sizing: border-box; 
     }
       
     .mantra {
         max-width: 33.333%;
         min-width: 300px;
-        /* padding-left: 10px;  */
-        box-sizing: border-box; /* include padding in max-width */
-    }
+        box-sizing: border-box; 
+    } */
 
 /************ Footer Styles ************/
 /* Setup footer box  */
@@ -330,8 +353,71 @@ footer {
         ".          .line4      .              .       ."
         "develop    line5   explainCD      line6       deliver";
     }
+    /* Adjust portfolio section for landscape */
+    /* Portfolio grid for entries */
+    .portfolioGrid {
+    display: grid;
+    /*  Grid */
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "wrcdvCover wrcdvChoice"
+    "travelCover travelChoice"
+    "goodEatsCover goodEatsChoice";
+    margin-top: 64px;
+    }
+    /* make this text block stackable */
+    .projectChoice {
+    display: block;
+    margin-left: 40px;
+    padding-top: 4rem;
+    }
+    .projectChoiceTitle { 
+        /* make text block moveable */
+        display: block;
+    }
+    .projectChoice button {
+        background-color: #38C1F9;
+        border-radius: 2px;
+        padding: 12px 32px;
+        color: #023246;
+        font-weight: 500;
+        font-size: 14px;
+    }
 }
-    
+@media screen and (min-width: 768px){
+    #bar {
+        height: 2.75rem;
+    }
+    .portfolio h3 { 
+        display: inline;
+        width: 75%;
+    }
+
+    /* about grid for entries */
+    .aboutGrid {
+    display: grid;
+    /*  Grid */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .05fr 1fr .05fr 1fr;
+    grid-template-areas: 
+    "aboutMeTitle   aboutMeTitle    aboutMeTitle"
+    "myPic  whyUX   influence"
+    "myPic  whyUX   influence"
+    "mantra drawing drawing";
+    margin-top: 64px;
+    }
+    /* setting up grid area */
+    #myPic {grid-area: myPic;}
+    #mantra {grid-area: mantra;}
+    #whyUX {grid-area: whyUX; margin-left: 16px;}
+    #influence {grid-area: influence; margin-left: 16px;}
+
+
+}
+
+
+
 /* setup for 1024 Desktop */
 @media screen and (min-width: 1024px) {
 
