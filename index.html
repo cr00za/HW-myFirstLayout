@@ -1,35 +1,178 @@
 <!DOCTYPE html>
-<html>
+
     <head>
-        <title>Miguel Ruddock</title>
-        <link rel="stylesheet" href="styles.css" type="text/css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Miguel's Portfolio Website</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles-body.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
     <body>
-        <!-- main content area -->
         <header>
+            <div class="safezone">IPHONE X SAFE ZONE</div>
             <nav>
-                <ul>
-                    <a href="#myProcess"></a>
-                    <a href="porfolio"></a>
-                    <a href="aboutMe"></a>
-                    <li>My Process</li>
-                    <li>Portfolio</li>
-                    <li>About Me</li>
-                </ul>
+                <div class="navlinks">
+                    <a href="#"><img src="images/Logo-dark.svg" alt="logo" id="logo"></a>
+                    <a href="#"><img src="images/hamburgerMenu-dark.svg" alt="menu" id="hamburger"></a>
+                    <!-- Hidden nav on mobile -->
+                    <ul class="tabletMenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">My Process</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
-        <!-- main content area -->
+        
         <main>
-            <section id="aboutMe">
-                <h1 class="author">Miguel Ruddock</h1>
-                <a href="/images/profile.jpg" alt="portrait picture of myself"></a>
+            <!-- Hero -->
+            <div class="hero">
+                <div id="heroflex1" class="heroIllustration">
+                    <img src="images/hero Illustration.png" alt="puzzle pieces coming together">
+                </div>
+                <div id="heroflex2" class="heroText">
+                    <h1>Miguel Ruddock</h1>
+                    <h2>User Experience / Interface Designer</h2>
+                    <p>I create opportunities through human-centric desogm and bring life to concepts, ideas, and dreams to positively impact the world.</p>
+                </div>
+                <div id="heroflex3" class="animatelogo">
+                    <img src="images/animatelogo.png" alt="placeholder for logo animation">
+                </div>
+            </div>
 
-            </section>
+            <!-- My Process -->
+            <div class="myProcess">
+                <h2>My Process</h2>
+                <div class="processGrid">
+                    <!-- Phase A: Discover -->
+                    <div id="discover" class="phase">
+                        <img src="images/imagePlaceholder-light.svg" alt="placeholder pic for Discover phase">
+                        <h4>Discover</h4>
+                    </div>
+
+                    <div id="line1" class="line"></div>
+                    <!-- Between phase A and B -->
+                    <div id="explainAB" class="explain">
+                        <p>Identify and explore problem spaces with empathy</p>
+                    </div>
+
+                    <div  id="line2" class="line"></div>
+                    <!-- Phase B: Define -->
+                    <div id="define" class="phase">
+                        <img src="images/imagePlaceholder-light.svg" alt="placeholder pic for Discover phase">
+                        <h4>Define</h4>
+                    </div>
+
+                    <div  id="line3" class="line"></div>
+                    <!-- Between phase B and C -->
+                    <div id="explainBC" class="explain">
+                        <p>Fearlessly test ideas with clear metrics to garner key insights</p>
+                    </div>
+
+                    <div  id="line4" class="line"></div>
+                    <!-- Phase C: Develop -->
+                    <div id="develop" class="phase">
+                        <img src="images/imagePlaceholder-light.svg" alt="placeholder pic for Discover phase">
+                        <h4>Develop</h4>
+                    </div>
+                    
+                    <div id="line5" class="line"></div>
+                    <!-- Between phase C and D -->
+                    <div id="explainCD" class="explain">
+                        <p>Iterate based on strategic design direction generated from feedback analysis</p>
+                    </div>
+
+                    <div id="line6" class="line"></div>
+                    <!-- Phase D: Deliver -->
+                    <div id="deliver" class="phase">
+                        <img src="images/imagePlaceholder-light.svg" alt="placeholder pic for Discover phase">
+                        <h4>Deliver</h4>
+                    </div>
+                </div>
+                <h4 class="awesomeness" >Awesomeness</h4>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="portfolio">
+                <h2>Portfolio</h2>
+  
+                    <div class="portfolioSub">
+                        <div id="bar"></div>
+                        <h3>View samples of projects I’ve completed
+                                below in my portfolio. They span from 
+                                responsive web to mobile app 
+                                design.</h3>
+                    </div>
+
+                    <!-- grid section for portfolio -->
+                    <div class="portfolioGrid">   
+                    
+                            <div id="wrcdvCover" class="cover">
+                                <img src="images/WRCDVcover@2x.png" alt="cover for WRCDV project">
+                            </div>
+                            <div id="wrcdvChoice" class="projectChoice">
+                                <div class="projectChoiceTitle">
+                                    <h4>Women's Resource Center</h4>
+                                    <h5>Non-profit site redesign</h5>
+                                </div>
+                                <button>See more</button>
+                            </div>
+                 
+                            <div id="travelCover" class="cover">
+                                <img src="images/travelcover@2x.png" alt="cover for travel project">
+                            </div>
+                            <div id="travelChoice" class="projectChoice">
+                                <div class="projectChoiceTitle">
+                                    <h4>Travel Flow App</h4>
+                                    <h5>Mobile App Design</h5>
+                                </div>
+                                <button>See more</button>
+                            </div>
+        
+                            <div id="goodEatsCover" class="cover">
+                                <img src="images/goodeatscover@2x.png" alt="cover for Good Eats project">
+                            </div>
+                            <div id="goodEatsChoice" class="projectChoice">
+                                <div class="projectChoiceTitle">
+                                    <h4>Good Eats App</h4>
+                                    <h5>Medical Mobile App</h5>
+                                </div>
+                                <button>See more</button>
+                            </div>
+                        
+                    </div>                    
+            </div>
+
+             <!-- About Section -->
+            <section class="about about-grid">
+                <a name="about-me"><h1>About Me</h1></a>
+                <img src="images/Portfolio Portrait.jpg" alt="portfolio portrait">
+                <div class="about-container"> 
+                    <!-- 3 Columns in About Me section -->
+                    <div class="whyux">
+                        <h2>Why UX/UI?</h2>
+                        <p>I began my career as a UX/UI designer after several  years as an electrical engineering consultant. UX/UI gave me a way to build on my skills in project management, collaboration, and meticulousness with detail to learn how to design creatively.</p>
+                    </div>
+                    <div class="influence">
+                            <h2>What has influenced me?</h2>
+                            <p>I’ve lived in and traveled to 15 countries including Japan, Austria, and Australia. But no matter where I go I always make new friends and create space in what began as unfamiliar.  In my spare time I enjoy silversmithing, guitar, Anime, sculpting running marathons, and working with my nonprofit, Heal Georgia.</p>
+                    </div>
+                    <div class="mantra">
+                            <h2>My personal mantra:</h2>
+                            <p>To design conversations and solutions that appeal to the heart of people and keep them engaged in a way that compliments the brand.</p>
+                    </div>
+                </div>
+            </section>  
         </main>
-
+        
         <footer>
-        <!-- footer area -->
+
         </footer>
     </body>
 </html>

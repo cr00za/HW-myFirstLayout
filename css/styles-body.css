@@ -1,0 +1,361 @@
+/*  */
+/******************* Hero *******************/
+
+.hero {
+    background-color: #FFF;
+    /* fixing random thin line between blocks */
+    margin-top: -1px;
+    padding
+    padding-bottom: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "heroIllustration heroIllustration heroIllustration heroIllustration"
+    "heroText heroText heroText heroText"
+    "animatelogo animatelogo animatelogo animatelogo";
+
+}
+
+.heroIllustration img {
+    /* set illustration width to 100% of the container size */
+    max-width: 90%;
+}
+.heroText {
+    /* use margin to align text with image */
+    margin-right: 16px; 
+    margin-top: 40px;
+    grid-area: heroText;
+
+}
+.heroIllustration {
+    grid-area: heroIllustration;
+    /* checking to see if I can use a flexbox to scale pic */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.heroText h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #023246;
+    letter-spacing: 0.08em;
+}
+.heroText h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #023246;
+}
+.heroText p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #023246;
+    width: 100%;
+}
+
+.animatelogo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-area: animatelogo;
+}
+
+
+/******************* My Process *******************/
+
+.myProcess {
+    padding: 40px 16px;
+    background-color: #318AB6;
+    box-sizing: border-box;
+    color: #F6F6F6;
+    
+}
+.processGrid {
+    text-align: center;
+    display: grid;
+    /* 1x14 Grid */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-areas: 
+    "discover"
+    "line1"
+    "explainAB"
+    "line2"
+    "define"
+    "line3"
+    "explainBC"
+    "line4"
+    "develop"
+    "line5"
+    "explainCD"
+    "line6"
+    "deliver";
+}
+
+/* alias grid items to apply to grid-template-areas */
+#discover {grid-area: discover;}
+#explainAB {grid-area: explainAB;}
+#define {grid-area: define;}
+#explainBC {grid-area: explainBC;}
+#develop {grid-area: develop;}
+#explainCD {grid-area: explainCD;}
+#deliver {grid-area: deliver;}
+
+/* alias connecting lines to place in grid*/
+#line1 {grid-area: line1;}
+#line2 {grid-area: line2;}
+#line3 {grid-area: line3;}
+#line4 {grid-area: line4;}
+#line5 {grid-area: line5;}
+#line6 {grid-area: line6;}
+
+/* bolder text for each phase */
+.phase {font-weight: 700;}
+.explain {margin: auto auto; color: #023246;}
+
+/* set explanation text lighter weight for hierarchy */
+.explain p { 
+    font-weight: 300; 
+    font-size: 14px; 
+    display: inline-block; 
+    margin: 0 0;
+    width: 55%;
+    margin: auto auto;
+}
+
+/* setup connecting lines */
+.line {
+    width: 2px;
+    height: 60px;
+    background-color: #023246;
+    /* display: inline-block; */
+    margin: auto auto;
+}
+
+.awesomeness {    
+    font-weight: 300;
+    font-size: 20px;
+    text-align: right;
+}
+
+.myProcess h2{margin-bottom: 24px;}
+
+/* scale all illustrations in grid to 50% */
+.myProcess img {width: 25%;}
+
+/******************* Portfolio *******************/
+/* setup frame */
+.portfolio { 
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #FFF;
+}
+/* setup title and subtitle */
+.portfolio h2 { margin: 48px 0 24px 0; }
+.portfolioSub {display: flex;}
+#bar {
+    display: inline-block;
+    background-color: #023246;
+    width: 16px;
+    height: 64px;
+    margin-right: 8px;
+}
+.portfolio h3 { 
+    font-weight: 300; 
+    display: inline;
+}
+
+/* Portfolio grid for entries */
+.portfolioGrid {
+    display: grid;
+    /*  Grid */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-areas: 
+    "wrcdvCover "
+    "wrcdvChoice"
+    "travelCover"
+    "travelChoice"
+    "goodEatsCover"
+    "goodEatsChoice";
+    margin-top: 64px;
+}
+/* covers */
+.cover img {
+    width: 100%;
+}
+#wrcdvCover {
+    grid-area: wrcdvCover;
+}
+#travelCover {
+    grid-area: travelCover;
+}
+#goodEatsCover {
+    grid-area: goodEatsCover;
+}
+/* Titles + see more buttons */
+#wrcdvChoice {
+    grid-area: wrcdvChoice;
+}
+#travelChoice {
+    grid-area: travelChoice;
+}
+#goodEatsChoice {
+    grid-area: goodEatsChoice;
+}
+
+/* style text & buttons for portfolio entries */
+.projectChoice {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.projectChoice button {
+    background-color: #38C1F9;
+    border-radius: 2px;
+    padding: 12px 32px;
+    color: #023246;
+    font-weight: 500;
+    font-size: 14px;
+}
+.projectChoiceTitle { 
+    /* make text block moveable */
+    display: inline-block;
+}
+.projectChoiceTitle h4 { 
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+ }
+.projectChoiceTitle h5 { 
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 0px;
+ }
+
+ /******************* About Section *******************/
+.about {
+    padding: 16px;
+}
+.about img {
+    width: 100%;
+}
+
+.about-me{
+    display: block;
+
+}
+.about h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.about p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.about-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+    .whyux {
+        max-width: 33.333%;
+        min-width: 300px;
+        /* padding-right: 10px; */
+        box-sizing: border-box; /* include padding in max-width */
+    }
+      
+    .influence {
+        max-width: 33.333%;
+        min-width: 300px;
+        /* padding: 0 10px; */
+        box-sizing: border-box; /* include padding in max-width */
+    }
+      
+    .mantra {
+        max-width: 33.333%;
+        min-width: 300px;
+        /* padding-left: 10px;  */
+        box-sizing: border-box; /* include padding in max-width */
+    }
+
+/************ Footer Styles ************/
+/* Setup footer box  */
+footer {
+    background-color: #023246;
+    max-width: 100%;
+    color: #F6F6F6;
+    padding: 36px 104px;
+}
+
+/******************* Responsive *******************/
+
+
+/* setup for landscape mode and larger screen sizes */
+@media screen and (min-width: 650px) {
+    .heroText p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #023246;
+        width: 90%;
+    }
+    /* HERO - Responsive */
+    .hero {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "heroText heroText heroIllustration heroIllustration"
+        ". animatelogo animatelogo ."
+       ;
+    }
+    /* MY PROCESS - Responsive */
+    /* scale all illustrations in grid to 50% */
+    .myProcess img {
+        width: 50%;
+    }
+    /* Readjusting grid for My Process Section */
+    .processGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-areas: 
+        "discover   line1   explainAB      line2       define"
+        ".          .       .              line5       ."
+        ".          .       explainBC      .           ."
+        ".          .line4      .              .       ."
+        "develop    line5   explainCD      line6       deliver";
+    }
+}
+    
+/* setup for 1024 Desktop */
+@media screen and (min-width: 1024px) {
+
+    .heroText {
+        /* use margin to kinda center text area */
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 16px; 
+        width: 80%;
+    }
+
+}
+
+    /* setup for 1280 Desktop */
+@media screen and (min-width: 1200px) {
+    
+    .heroText {
+        /* use margin to kinda center text area */
+        margin-top: 80px;
+        margin-left: 80px;
+        width: 65%;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+}
