@@ -130,7 +130,7 @@
     width: 2px;
     height: 60px;
     background-color: #023246;
-    /* display: inline-block; */
+    display: inline-block;
     margin: auto auto;
 }
 
@@ -273,6 +273,31 @@
     margin-top: 40px;
 } */
 
+.aboutGrid {
+    display: grid;
+    /*  Grid */
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr .05fr .05fr .05fr .05fr .05fr .05fr .05fr;
+    grid-template-areas: 
+    "aboutMeTitle"
+    "myPic"
+    "mantra"
+    "."
+    "whyUX"
+    "."
+    "influence"
+    "drawing"
+    "social";
+    margin-top: 64px;
+    margin-bottom: 64px;
+    }
+    /* setting up grid area */
+    #myPic {grid-area: myPic;}
+    #mantra {grid-area: mantra;}
+    #whyUX {grid-area: whyUX;}
+    #influence {grid-area: influence;}
+    .social {grid-area: social;}
+
 
 
 /* sizing the illustration pics */
@@ -288,7 +313,7 @@
         margin-bottom: 32px; 
         display: inline-block;
     }
-   
+
     /* include padding in max-width */
     /* .whyux {
         max-width: 33.333%;
@@ -307,6 +332,13 @@
         min-width: 300px;
         box-sizing: border-box; 
     } */
+/* Connect with me on Social network */
+
+.social img {
+    display: inline-block;
+    width: 44px;
+    margin: 0 8px 0 0;
+}
 
 /************ Footer Styles ************/
 /* Setup footer box  */
@@ -328,7 +360,7 @@ footer {
         color: #023246;
         width: 90%;
     }
-    /* HERO - Responsive */
+    /* HERO - Responsive *********************************************/
     .hero {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -337,22 +369,34 @@ footer {
         ". animatelogo animatelogo ."
        ;
     }
-    /* MY PROCESS - Responsive */
+    /* MY PROCESS - Responsive ***************************************/
     /* scale all illustrations in grid to 50% */
     .myProcess img {
         width: 50%;
     }
+
     /* Readjusting grid for My Process Section */
     .processGrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "discover   line1   explainAB      line2       define"
         ".          .       .              line5       ."
         ".          .       explainBC      .           ."
-        ".          .line4      .              .       ."
+        ".          line4      .              .       ."
         "develop    line5   explainCD      line6       deliver";
     }
+    /* setup connecting lines */
+    .line {
+    width: 60px;
+    height: 2px;
+    background-color: #023246;
+    display: inline-block;
+    margin: auto auto;
+    }
+    
+
     /* Adjust portfolio section for landscape */
     /* Portfolio grid for entries */
     .portfolioGrid {
@@ -397,14 +441,14 @@ footer {
     /* about grid for entries */
     .aboutGrid {
     display: grid;
-    /*  Grid */
+    /*  Grid 3x4*/
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .05fr 1fr .05fr 1fr;
+    grid-template-rows: .25fr 1fr .25fr .5fr;
     grid-template-areas: 
     "aboutMeTitle   aboutMeTitle    aboutMeTitle"
     "myPic  whyUX   influence"
     "myPic  whyUX   influence"
-    "mantra drawing drawing";
+    "social drawing drawing";
     margin-top: 64px;
     }
     /* setting up grid area */
