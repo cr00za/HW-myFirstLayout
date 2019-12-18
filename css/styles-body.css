@@ -5,7 +5,6 @@
     background-color: #FFF;
     /* fixing random thin line between blocks */
     margin-top: -1px;
-    padding
     padding-bottom: 80px;
     padding-left: 16px;
     padding-right: 16px;
@@ -377,24 +376,27 @@ footer {
 
     /* Readjusting grid for My Process Section */
     .processGrid {
-        display: grid;
-        grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "discover   line1   explainAB      line2       define"
-        ".          .       .              line5       ."
+        ".          .       .              line3       ."
         ".          .       explainBC      .           ."
-        ".          line4      .              .       ."
+        ".          line4      .             .       ."
         "develop    line5   explainCD      line6       deliver";
+        width: 80%;
+        margin: auto;
     }
     /* setup connecting lines */
     .line {
-    width: 60px;
+    width: 100%;
     height: 2px;
     background-color: #023246;
     display: inline-block;
     margin: auto auto;
     }
+
+    
     
 
     /* Adjust portfolio section for landscape */
