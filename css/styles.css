@@ -9,7 +9,7 @@ body, h2, h3 {
 /* setup header layout + color */
 
 header {
-    background-color: #FFFFFF;
+    background-color: #F6f6f6;
     
 }
 /* creating a safe zone for iphonx X header */
@@ -21,7 +21,7 @@ header {
 
 nav {
     height: 89px;
-    background-color: #FFFFFF;
+    background-color: #F6f6f6;
     display: flex;
 }
 
@@ -92,8 +92,10 @@ nav img {
 }
 
 
-@media screen and  (min-width: 900px) {
- 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
     /* Hide safezone */
     .safezone {
         display: none;
@@ -128,7 +130,7 @@ nav img {
     }
 }
 
-@media screen and  (min-width: 1200px) {
+@media screen and  (min-width: 900px) {
  
     /* Hide safezone */
     .safezone {
@@ -162,4 +164,9 @@ nav img {
     font-weight: 200;
     font-size: 16px;
     }
+
 }
+
+
+
+

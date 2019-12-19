@@ -2,7 +2,7 @@
 /******************* Hero *******************/
 
 .hero {
-    background-color: #FFF;
+    background-color: #f6f6f6;
     /* fixing random thin line between blocks */
     margin-top: -1px;
     padding-bottom: 80px;
@@ -133,11 +133,7 @@
     margin: auto auto;
 }
 
-.awesomeness {    
-    font-weight: 300;
-    font-size: 20px;
-    text-align: right;
-}
+
 
 .myProcess h2{margin-bottom: 24px;}
 
@@ -149,7 +145,7 @@
 .portfolio { 
     padding-left: 16px;
     padding-right: 16px;
-    background-color: #FFF;
+    background-color: #F6f6f6;
 }
 /* setup title and subtitle */
 .portfolio h2 { margin: 48px 0 24px 0; }
@@ -345,8 +341,9 @@ footer {
     background-color: #023246;
     max-width: 100%;
     color: #F6F6F6;
-    padding: 36px 104px;
+    padding: 36px 8px;
 }
+.footText { font-size: 12px; font-weight: 300;}
 
 /******************* Responsive *******************/
 
@@ -376,8 +373,8 @@ footer {
 
     /* Readjusting grid for My Process Section */
     .processGrid {
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
+        grid-template-columns: 0.5fr 0.75fr 1fr 0.75fr 0.5fr;
+        grid-template-rows: 0.5fr 0.75fr 1fr 0.75fr 0.5fr;
         grid-template-areas: 
         "discover   line1   explainAB      line2       define"
         ".          .       .              line3       ."
@@ -387,6 +384,11 @@ footer {
         width: 80%;
         margin: auto;
     }
+
+    /* making adjustments for rectangular layout to show process diagnol lines correctly */
+    .medScreenAdjust {
+        grid-area: medScreenAdjust;}
+
     /* setup connecting lines */
     .line {
     width: 100%;
@@ -396,8 +398,8 @@ footer {
     margin: auto auto;
     }
 
-    #line3 {transform: rotate(-45deg);}
-    #line4 {transform: rotate(-45deg);margin-right: auto;}
+    #line3 {transform: rotate(-45deg); margin: auto auto;}
+    #line4 {transform: rotate(-45deg); margin: auto auto;}
     
 
     /* Adjust portfolio section for landscape */
@@ -475,6 +477,37 @@ footer {
         margin-right: 16px; 
         width: 80%;
     }
+
+    /* stroke effect setup*/
+    nav ul li a,
+    nav ul li a:after,
+    nav ul li a:before {
+    transition: all .5s;
+    }
+    nav ul li a:hover {
+    color: #555;
+    }
+    /* stroke effect */
+    .navlinks.stroke ul li a{
+    position: relative;
+    }
+    .navlinks.stroke ul li a:after,
+    .navlinks.fill ul li a:after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #023246;
+    height: 2px;
+    }
+    .navlinks.stroke ul li a:hover:after {
+    width: 100%;
+    }
+
 
 }
 
