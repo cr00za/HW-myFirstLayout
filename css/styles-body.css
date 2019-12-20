@@ -2,7 +2,7 @@
 /******************* Hero *******************/
 
 .hero {
-    background-color: #f6f6f6;
+    background-color: #FFF;
     /* fixing random thin line between blocks */
     margin-top: -1px;
     padding-bottom: 80px;
@@ -10,7 +10,7 @@
     padding-right: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr .05fr;
     grid-template-areas: 
     "heroIllustration heroIllustration heroIllustration heroIllustration"
     "heroText heroText heroText heroText"
@@ -25,7 +25,7 @@
 .heroText {
     /* use margin to align text with image */
     margin-right: 16px; 
-    margin-top: 40px;
+    margin-top: 10px;
     grid-area: heroText;
 
 }
@@ -54,8 +54,20 @@
     width: 100%;
 }
 
+.buttonCTA {
+    border: none;
+    background-color: #38C1F9;
+    color: #000000;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 10px;
+}
+/* hiding CTA under illustration for mobile */
+.heroIllustration .buttonCTA { visibility: hidden;}
+
+/* TEST ---- display: none replaced display: flex */
 .animatelogo {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     grid-area: animatelogo;
@@ -64,13 +76,26 @@
 
 /******************* My Process *******************/
 
+
 .myProcess {
     padding: 40px 16px;
-    background-color: #318AB6;
+    background-color: #FFF;
     box-sizing: border-box;
-    color: #F6F6F6;
-    
+    color: #023246;
 }
+
+.blockTitle{
+    background-color: #023246;
+    color: #F6F6F6;
+    max-width: 98%;
+    margin-left: -16px;
+}
+.blockTitle h2 {
+    padding-top: 20px ;
+    padding-bottom: 20px;
+    padding-left: 16px;
+}
+
 .processGrid {
     text-align: center;
     display: grid;
@@ -131,6 +156,7 @@
     background-color: #023246;
     display: inline-block;
     margin: auto auto;
+    padding: 0;
 }
 
 
@@ -145,6 +171,7 @@
 .portfolio { 
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 32px;
     background-color: #F6f6f6;
 }
 /* setup title and subtitle */
@@ -345,8 +372,11 @@ footer {
 }
 .footText { font-size: 12px; font-weight: 300;}
 
-/******************* Responsive *******************/
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/******************* Responsive *******************/
 
 /* setup for landscape mode and larger screen sizes */
 @media screen and (min-width: 650px) {
@@ -359,12 +389,21 @@ footer {
     /* HERO - Responsive *********************************************/
     .hero {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr .05fr;
         grid-template-areas: 
         "heroText heroText heroIllustration heroIllustration"
         ". animatelogo animatelogo ."
        ;
+       padding-top: 40px;
     }
+    /* push hero image to the right */
+    .heroIllustration {display: flex; justify-content: center}
+    .heroIllustration img { margin-right: auto;}
+    /* hide CTA under text block and show CTA under illustration */
+    .heroText .buttonCTA { visibility: hidden;}
+    .heroIllustration .buttonCTA { visibility: visible;}
+    
+
     /* MY PROCESS - Responsive ***************************************/
     /* scale all illustrations */
     .myProcess img {
@@ -398,8 +437,8 @@ footer {
     margin: auto auto;
     }
 
-    #line3 {transform: rotate(-45deg); margin: auto auto;}
-    #line4 {transform: rotate(-45deg); margin: auto auto;}
+    #line3 {transform: rotate(-40deg); margin: auto auto;}
+    #line4 {transform: rotate(-40deg); margin: auto auto;}
     
 
     /* Adjust portfolio section for landscape */
@@ -440,7 +479,8 @@ footer {
     }
     .portfolio h3 { 
         display: inline;
-        width: 75%;
+        /* width: 75%; */
+        padding-right: 28%;
     }
 
     /* about grid for entries */
@@ -477,38 +517,14 @@ footer {
         margin-right: 16px; 
         width: 80%;
     }
-
-    /* stroke effect setup*/
-    nav ul li a,
-    nav ul li a:after,
-    nav ul li a:before {
-    transition: all .5s;
-    }
-    nav ul li a:hover {
-    color: #555;
-    }
-    /* stroke effect */
-    .navlinks.stroke ul li a{
-    position: relative;
-    }
-    .navlinks.stroke ul li a:after,
-    .navlinks.fill ul li a:after {
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: #023246;
-    height: 2px;
-    }
-    .navlinks.stroke ul li a:hover:after {
-    width: 100%;
+    .portfolio h3 { 
+        display: inline;
+        /* width: 75%; */
+        padding-right: 47%;
     }
 
-
+    #line3 {transform: rotate(-37deg); margin: auto auto;}
+    #line4 {transform: rotate(-38deg); margin: auto auto;}
 }
 
     /* setup for 1280 Desktop */
@@ -521,7 +537,10 @@ footer {
         width: 65%;
     }
 
-    .hero {
-        padding-top: 40px;
-    }
+    .hero {padding-top: 40px;}
+
+    #line3 {transform: rotate(-34deg); margin: auto auto;}
+    #line4 {transform: rotate(-34deg); margin: auto auto;}
+
+
 }

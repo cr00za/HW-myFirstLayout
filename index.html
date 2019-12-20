@@ -17,9 +17,10 @@
             <nav>
                 <div class="navlinks">
                     <a href="#"><img src="images/Logo-dark.svg" alt="logo" id="logo"></a>
+                    <!-- hidden on devices larger than mobile -->
                     <a href="#"><img src="images/hamburgerMenu-dark.svg" alt="menu" id="hamburger"></a>
                     <!-- Hidden nav on mobile -->
-                    <ul class="tabletMenu">
+                    <ul class="tabletMenu stroke">
                             <li><a href="#">Home</a></li>
                             <li><a href="#my-process">My Process</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
@@ -32,15 +33,18 @@
         
         <main>
             <!-- Hero -->
-            <div class="hero">
+            <div class="hero heroGrid">
                 <div id="heroflex1" class="heroIllustration">
                     <img src="images/hero-minimal.png" alt="puzzle pieces coming together">
+                    <button class="buttonCTA">Contact me</button>
                 </div>
                 <div id="heroflex2" class="heroText">
                     <h1>Miguel Ruddock</h1>
                     <h2>User Experience / Interface Designer</h2>
-                    <p>I create opportunities through human-centric desogm and bring life to concepts, ideas, and dreams to positively impact the world.</p>
+                    <p>I create opportunities through human-centric design and bring life to concepts, ideas, and dreams to positively impact the world.</p>
+                    <button class="buttonCTA">Contact me</button>
                 </div>
+            
                 <div id="heroflex3" class="animatelogo">
                     <img src="images/animatelogo.svg" alt="placeholder for logo animation">
                 </div>
@@ -49,7 +53,10 @@
             <!-- My Process -->
             <div class="myProcess">
                 <a name="my-process" href=""></a>
-                <h2>My Process</h2>
+                <div class="blockTitle">
+                    <h2>My Process</h2>
+                </div>
+                
                 <div class="processGrid">
                     <!-- Phase A: Discover -->
                     <div id="discover" class="phase">
