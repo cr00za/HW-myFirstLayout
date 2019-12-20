@@ -56,6 +56,11 @@ nav img {
     display: none;
 }
 
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/******************* Responsive *******************/
+
 @media screen and  (min-width: 797px) {
  
     /* Hide safezone */
@@ -91,8 +96,6 @@ nav img {
     font-size: 16px;
     }
 
-/* ////////////////// */
-
         /* stroke effect setup*/
         nav ul li a,
         nav ul li a:after,
@@ -102,6 +105,7 @@ nav img {
         nav ul li a:hover {
         color: #023246;
         font-weight: 300;
+        box-sizing: border-box; 
         }
         /* stroke effect */
         .stroke li a{
