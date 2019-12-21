@@ -456,20 +456,30 @@ footer {
     .portfolioGrid {
     display: grid;
     /*  Grid */
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "wrcdvCover wrcdvChoice"
-    "travelCover travelChoice"
-    "goodEatsCover goodEatsChoice";
+    "wrcdvCover wrcdvCover wrcdvCover wrcdvChoice"
+    "travelChoice travelCover travelCover travelCover"
+    "goodEatsCover goodEatsCover goodEatsCover goodEatsChoice";
     margin-top: 64px;
     }
     /* make this text block stackable */
-    .projectChoice {
+    #wrcdvChoice,
+    #goodEatsChoice {
     display: block;
     margin-left: 40px;
     padding-top: 4rem;
     }
+
+   .projectChoice,
+   #travelChoice button {
+        display: block;
+        margin-left: auto;
+    }
+    /* fixing the spacing to the cover for the second entry */
+    #travelChoice {padding-right: 40px;}
+
     .projectChoiceTitle { 
         /* make text block moveable */
         display: block;
