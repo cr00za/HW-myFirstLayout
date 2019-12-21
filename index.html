@@ -35,7 +35,7 @@
             <!-- Hero -->
             <div class="hero heroGrid">
                 <div id="heroflex1" class="heroIllustration">
-                    <img src="images/hero-minimal.png" alt="puzzle pieces coming together">
+                    <img src="images/hero-bluepeople3.png" alt="puzzle pieces coming together">
                     <button class="buttonCTA">Contact me</button>
                 </div>
                 <div id="heroflex2" class="heroText">
@@ -132,7 +132,7 @@
                                     <h4>Women's Resource Center</h4>
                                     <h5>Non-profit site redesign</h5>
                                 </div>
-                                <button>See more</button>
+                                <button class="buttonCTA">See more</button>
                             </div>
 
                             <div id="travelCover" class="cover">
@@ -143,7 +143,7 @@
                                     <h4>Travel Flow App</h4>
                                     <h5>Mobile App Design</h5>
                                 </div>
-                                <button>See more</button>
+                                <button class="buttonCTA">See more</button>
                             </div>
         
                             <div id="goodEatsCover" class="cover">
@@ -154,7 +154,7 @@
                                     <h4>Good Eats App</h4>
                                     <h5>Medical Mobile App</h5>
                                 </div>
-                                <button>See more</button>
+                                <button class="buttonCTA">See more</button>
                             </div>
                         
                     </div>                    
@@ -210,7 +210,24 @@
             <p class="footText">© CreativeUX 2019</p>
             <p class="footText">© Miguel Ruddock 2019</p>
         </footer>
-
+   
+        <script>// When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+            
+            // Get the navbar
+            var nav = document.getElementById("nav");
+            
+            // Get the offset position of the navbar
+            var sticky = nav.offsetTop;
+            
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                nav.classList.add("sticky")
+              } else {
+                nav.classList.remove("sticky");
+              }
+            }</script>
     </body>
 </html>
 

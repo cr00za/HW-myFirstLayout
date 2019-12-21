@@ -62,6 +62,16 @@
     font-size: 14px;
     padding: 10px;
 }
+
+.buttonCTA:hover  {
+    background-color: #023246;
+    color: #F6F6F6;
+    transition: background-color color .3s;
+    transition: color .3s;
+}
+
+
+
 /* hiding CTA under illustration for mobile */
 .heroIllustration .buttonCTA { visibility: hidden;}
 
