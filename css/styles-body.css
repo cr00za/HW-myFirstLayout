@@ -182,7 +182,7 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 32px;
-    background-color: #F6f6f6;
+    background-color: #FFFFFF;
 }
 /* setup title and subtitle */
 .portfolio h2 { margin: 48px 0 24px 0; }
@@ -390,10 +390,38 @@ footer {
 
 /* setup for landscape mode and larger screen sizes */
 @media screen and (min-width: 714px) {
+
+
+/* box shadow .heroText */
+.heroText {
+    background-color: #287094;
+    justify-self: start;
+    width 80%;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 44px 20px -20px rgba(196, 196, 196, 0.8);
+    
+}
+
+/* animate the hero text on hover */
+.heroText:hover
+{
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+        box-shadow: 0px 10px 10px 0px rgba(196, 196, 196, 0.4);
+        transition: .5s ease-in-out;
+}
+
+
+
+.hero h1,
+.hero h2 {
+    color: #F6F6F6;
+}
     .heroText p {
         font-size: 16px;
         font-weight: 300;
-        color: #023246;
+        color: #F6F6F6;
         width: 90%;
     }
     /* HERO - Responsive *********************************************/
@@ -405,7 +433,17 @@ footer {
         ". animatelogo animatelogo ."
        ;
        padding-top: 40px;
+       /* extending the hero text block to the left edge */
+       padding-left: 0;
+
+       justify-self: left;
     }
+    /* Giving the Hero Text block its proper padding */
+    .heroText { 
+        margin-left: 0;
+        margin-right: auto;
+        padding-left: 16px;}
+   
     /* push hero image to the right */
     .heroIllustration {display: flex; justify-content: center}
     .heroIllustration img { margin-right: auto;}
@@ -496,6 +534,18 @@ footer {
     }
 }
 @media screen and (min-width: 768px){
+
+    /* Hero Text */
+    .heroText {
+        /* use margin to kinda center text area */
+        position: absolute;
+        /* margin-top: 40px; */
+        margin-left: 0px;
+        margin-right: 16px; 
+        width: 45%;
+    }
+
+
     #bar {
         height: 2.75rem;
     }
@@ -533,12 +583,11 @@ footer {
 @media screen and (min-width: 1024px) {
 
     .heroText {
-        /* use margin to kinda center text area */
-        margin-top: 40px;
-        margin-left: 40px;
-        margin-right: 16px; 
-        width: 80%;
+        display: inline-block;
+        margin-right: 24px; 
+        width: 40%;
     }
+  
     .portfolio h3 { 
         display: inline;
         /* width: 75%; */
@@ -560,8 +609,8 @@ footer {
     .heroText {
         /* use margin to kinda center text area */
         margin-top: 80px;
-        margin-left: 80px;
-        width: 65%;
+        /* margin-left: 80px; */
+        width: 35%;
     }
 
     .hero {padding-top: 40px;}
