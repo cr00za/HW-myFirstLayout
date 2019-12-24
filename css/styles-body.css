@@ -2,12 +2,21 @@
 
 body {max-width: 1280px;}
 .titleFont {
+    font-size: 48px;
     font-weight: 600;   
     font-family: 'Barlow Condensed', sans-serif;}
 .sectionTitle {
     font-weight: 400;
     font-family: 'Barlow Condensed', sans-serif;
 }
+.lightText {color: #f6f6f6;}
+.darkText {color: #023246;}
+.darkBkgnd {background-color: #023246;}
+.lightBkgnd {background-color: #FFFFFF;}
+#aboutMeTitle {margin-left: 8px;}
+.contactSection {padding-left: 16px; padding-top: 24px; height: 120px; background-color: #287094;}
+
+
 h4 {font-weight: 300;}
 /******************* Hero *******************/
 
@@ -286,9 +295,7 @@ h4 {font-weight: 300;}
 .about {
     padding: 16px;
 }
-.about img {
-    width: 100%;
-}
+#aboutCol1 img {max-width: 100%;}
 
 #aboutMeTitle {
     display: block;
@@ -318,23 +325,23 @@ h4 {font-weight: 300;}
     grid-template-rows: .05fr .05fr .05fr .05fr .05fr .05fr .05fr .05fr;
     grid-template-areas: 
     "aboutMeTitle"
-    "myPic"
+    "aboutCol1"
     "mantra"
     "."
-    "whyUX"
+    "aboutCol3"
     "."
     "influence"
     "drawing"
-    "social";
+    "aboutCol2";
     margin-top: 64px;
     margin-bottom: 64px;
     }
     /* setting up grid area */
-    #myPic {grid-area: myPic;}
+    #aboutCol1 {grid-area: aboutCol1;}
     #mantra {grid-area: mantra;}
-    #whyUX {grid-area: whyUX;}
+    #aboutCol3 {grid-area: aboutCol3;}
     #influence {grid-area: influence;}
-    .social {grid-area: social;}
+    #aboutCol2 {grid-area: aboutCol2;}
 
 
 
@@ -351,20 +358,28 @@ h4 {font-weight: 300;}
         margin-bottom: 32px; 
         display: inline-block;
     }
+/* adjust portrait to fit in box */
+#aboutCol1 img {width: 100%;}
+#aboutCol1 {
+    padding-left: 16px; 
+    padding-right: 16px; 
+    width: 80%;
+
+}
 
 /* Connect with me on Social network */
-.social img {
+#aboutCol2 img {
     display: inline-block;
-    width: 44px;
+    max-width: 44px;
     margin: 0 8px 0 0;
 }
 
 /************ Footer Styles ************/
 /* Setup footer box  */
 footer {
-    background-color: #023246;
+    background-color: #FFFFFF;
     max-width: 100%;
-    color: #F6F6F6;
+    color: #023246;
     padding: 36px 8px;
 }
 .footText { font-size: 12px; font-weight: 300;}
@@ -372,6 +387,8 @@ footer {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 376px) {
+    #aboutMeTitle {margin-left: 16px;}
+
     #myProcessContentGrid {
         display: grid;
         grid-template-columns: 1fr;
@@ -619,21 +636,37 @@ footer {
     display: grid;
     /*  Grid 3x4*/
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .25fr 1fr .25fr .5fr;
+    gap: 16px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "aboutMeTitle   aboutMeTitle    aboutMeTitle"
-    "myPic  whyUX   influence"
-    "myPic  whyUX   influence"
-    "social drawing drawing";
-    margin-top: 64px;
+    "aboutCol1  aboutCol2   whyux"
+    "aboutCol1  aboutCol2   whyux"
+    "aboutCol1  aboutCol2   influence"
+    "aboutCol1  aboutCol2   influence";
+
+    margin-top: 0px;
     }
     /* setting up grid area */
-    #myPic {grid-area: myPic;}
-    #mantra {grid-area: mantra;}
-    #whyUX {grid-area: whyUX; margin-left: 16px;}
-    #influence {grid-area: influence; margin-left: 16px;}
+    #aboutCol1 {grid-area: aboutCol1;}
+    #aboutCol2 {grid-area: aboutCol2;}
+    #whyux {grid-area: whyux;}
+    /* #mantra {grid-area: mantra;} */
+    #influence {grid-area: influence;}
+    #aboutCol2 {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-
+    }
+    #col2Box {
+        display: inline-block;
+        margin-left: 50%;
+        margin-right: 50%;    
+    }
+    #aboutCol1 {
+        background-color: #287094;
+    }
 }
 
 
@@ -664,7 +697,7 @@ footer {
 
     /* setup for 1280 Desktop */
 @media screen and (min-width: 1200px) {
-    
+    #aboutMeTitle {margin-left: 24px;}
     .heroText {
         /* use margin to kinda center text area */
         margin-top: 80px;
