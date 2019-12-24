@@ -459,13 +459,10 @@ footer {
 
 
 
-.hero h1,
-.hero h2 {
-    color: #F6F6F6;
-}
+.hero h1 {color: #F6F6F6;}
+.hero h2 {color: #38C1F9;}
     .heroText p {
         font-size: 16px;
-        font-weight: 300;
         color: #F6F6F6;
         width: 90%;
     }
@@ -513,7 +510,7 @@ footer {
     }
     .teamworkText {
         /* positioning text within its container */
-        position: absolute;
+        /* position: absolute; */
         width: 55%;
         grid-area: teamworkText;
 
@@ -521,11 +518,10 @@ footer {
     
     #teamworkTextBox {
 
-        position: relative;
+        /* position: relative; */
         background-color: #f6f6f6;
         max-width 100%;
-        padding-left: 15%;
-        padding-top: 25%;
+
     }
     /* setup phase text to take up minimum height */
 
