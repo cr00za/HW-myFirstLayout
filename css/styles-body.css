@@ -1,4 +1,14 @@
 /*  */
+
+body {max-width: 1280px;}
+.titleFont {
+    font-weight: 600;   
+    font-family: 'Barlow Condensed', sans-serif;}
+.sectionTitle {
+    font-weight: 400;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+h4 {font-weight: 300;}
 /******************* Hero *******************/
 
 .hero {
@@ -10,11 +20,10 @@
     padding-right: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr .05fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "heroIllustration heroIllustration heroIllustration heroIllustration"
-    "heroText heroText heroText heroText"
-    "animatelogo animatelogo animatelogo animatelogo";
+    "heroText heroText heroText heroText";
 
 }
 
@@ -85,6 +94,7 @@
 
 
 /******************* My Process *******************/
+/* Style section titles */
 
 
 .myProcessSection {
@@ -137,7 +147,7 @@
 #line6 {grid-area: line6;} */
 
 /* bolder text for each phase */
-.phase {font-weight: 700;}
+
 .phaseText {margin: auto auto; color: #023246;}
 
 /* set explanation text lighter weight for hierarchy */
@@ -361,6 +371,64 @@ footer {
 
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 376px) {
+    #myProcessContentGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr;
+        grid-template-areas: 
+        "processGrid" 
+        "teamworkText";
+
+    }
+    .teamworkText {
+        /* positioning text within its container */
+        width: 55%;
+        grid-area: teamworkText;
+        display: inline-block;
+
+    }
+
+    #teamworkTextBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f6f6;
+        max-width 100%;
+        /* position: relative; */
+        /* margin-left: -16px; */
+        /* padding-left: 16px;
+        padding-top: 24px; */
+
+    }
+    /* setup phase text to take up minimum height */
+
+.phaseText p {
+    width: 80;
+    font-weight: 300;
+    text-align: start;    
+}
+.teamworkText p {font-weight: 300;}
+
+    /* Defining the Grid sections */
+    /* Readjusting grid for My Process Section */
+    .processGrid {
+        display: grid;
+        grid-area: processGrid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "discover   define"
+        "develop    deliver";
+
+    }
+}
+
+
+
+
+
+
 
 
 /******************* Responsive *******************/
@@ -450,6 +518,7 @@ footer {
         grid-area: teamworkText;
 
     }
+    
     #teamworkTextBox {
 
         position: relative;
@@ -457,29 +526,16 @@ footer {
         max-width 100%;
         padding-left: 15%;
         padding-top: 25%;
-        margin-right: -16px;
     }
     /* setup phase text to take up minimum height */
 
 .phaseText p {
-    width: 90%;
+    width: 75%;
     font-weight: 300;    
 }
+
 .teamworkText p {font-weight: 300; margin-top: 8px;}
 
-    /* Defining the Grid sections */
-    /* Readjusting grid for My Process Section */
-    .processGrid {
-        text-align: left;
-        display: grid;
-        grid-area: processGrid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "discover   define"
-        "develop    deliver";
-
-    }
 
 
 
