@@ -6,8 +6,9 @@ body {width: 100%;}
     font-weight: 600;   
     font-family: 'Barlow Condensed', sans-serif;}
 .sectionTitle {
-    font-weight: 400;
+    font-weight: 500;
     font-family: 'Barlow Condensed', sans-serif;
+    color: #023246;
 }
 .lightText {color: #f6f6f6;}
 .darkText {color: #023246;}
