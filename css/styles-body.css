@@ -342,16 +342,16 @@ h4 {font-weight: 300;}
     }
     /* setting up grid area */
     #aboutCol1 {grid-area: aboutCol1;}
-    #mantra {grid-area: mantra;}
-    #aboutCol3 {grid-area: aboutCol3;}
-    #influence {grid-area: influence;}
     #aboutCol2 {grid-area: aboutCol2;}
+    #whyUX {grid-area: whyUX;}
+    #influence {grid-area: influence;}
+ 
 
 
 /* sizing the illustration pics */
 .aboutIllustration img{
     /* display: inline-block; */
-    /* width: 100%; */
+    width: 50%;
     text-align: center;
     margin-bottom: 8px;
 }
