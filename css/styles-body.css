@@ -9,6 +9,7 @@ body {width: 100%;}
     font-weight: 500;
     font-family: 'Barlow Condensed', sans-serif;
     color: #023246;
+    margin-top: 32px;
 }
 .lightText {color: #f6f6f6;}
 .darkText {color: #023246;}
@@ -331,13 +332,12 @@ h4 {font-weight: 300;}
     display: grid;
     /*  Grid */
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr .75fr .75fr .25fr;
     grid-template-areas: 
     "aboutCol1"
     "whyUX"
     "influence"
     "aboutCol2";
-    margin-top: 64px;
     margin-bottom: 64px;
     }
     /* setting up grid area */
@@ -360,15 +360,18 @@ h4 {font-weight: 300;}
         margin-top: 0px;   
         margin-bottom: 32px; 
         display: inline-block;
+        width: 80%;
     }
 /* adjust portrait to fit in box */
 #aboutCol1 img {width: 100%;}
 #aboutCol1 {
     padding-left: 16px; 
     padding-right: 16px; 
-    width: 80%;
+    /* width: 80%; */
 
 }
+#aboutCol1 h4 {font-weight: 600;}
+
 .social a {text-decoration: none; display: inline-block;}
 /* Connect with me on Social network */
 .social img {
