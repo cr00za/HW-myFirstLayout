@@ -157,6 +157,7 @@ h4 {font-weight: 300;}
 
 /* bolder text for each phase */
 
+.phase h4 {font-weight: 500;}
 .phaseText {margin: auto auto; color: #023246;}
 
 /* set explanation text lighter weight for hierarchy */
@@ -372,7 +373,7 @@ h4 {font-weight: 300;}
     width: 80%;
 
 }
-.social a {text-decoration: none;display: inline-block;}
+.social a {text-decoration: none; display: inline-block;}
 /* Connect with me on Social network */
 .social img {
     display: inline-block;
