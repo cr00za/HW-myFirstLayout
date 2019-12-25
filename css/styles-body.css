@@ -1,6 +1,6 @@
 /*  */
 
-body {max-width: 1280px;}
+body {width: 100%;}
 .titleFont {
     font-size: 48px;
     font-weight: 600;   
@@ -14,9 +14,9 @@ body {max-width: 1280px;}
 .darkBkgnd {background-color: #023246;}
 .lightBkgnd {background-color: #FFFFFF;}
 #aboutMeTitle {margin-left: 8px;}
-.contactSection {padding-left: 16px; padding-top: 24px; height: 120px; background-color: #287094;}
 
-
+/* Contact Section */
+.contactSection {padding: 24px 16px; height: auto; background-color: #287094;}
 h4 {font-weight: 300;}
 /******************* Hero *******************/
 
@@ -233,6 +233,13 @@ h4 {font-weight: 300;}
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0px 84px 30px -60px rgba(196, 196, 196, 0.8);
 }
+
+/* more specific target the the travel app cover and push it right */
+#travelcover img {
+    display: inline-block;
+    margin-right: 0;
+}
+
 .cover {
     margin-bottom: 40px;
 } 
@@ -344,11 +351,10 @@ h4 {font-weight: 300;}
     #aboutCol2 {grid-area: aboutCol2;}
 
 
-
 /* sizing the illustration pics */
-.illustration {
-    display: inline-block;
-    width: 50%;
+.aboutIllustration {
+    /* display: inline-block; */
+    max-width: 25%;
     text-align: center;
     margin-bottom: 8px;
 }
@@ -411,7 +417,9 @@ footer {
         justify-content: center;
         align-items: center;
         background-color: #f6f6f6;
+        height: 455px;
         max-width 100%;
+        height: 455px;
         /* position: relative; */
         /* margin-left: -16px; */
         /* padding-left: 16px;
@@ -661,11 +669,14 @@ footer {
     }
     #col2Box {
         display: inline-block;
-        margin-left: 50%;
-        margin-right: 50%;    
+        max-width: 414px;
+        /* margin-left: 50%;
+        margin-right: 50%;   */
+
     }
     #aboutCol1 {
         background-color: #287094;
+        color: #F6F6F6;  
     }
 }
 
