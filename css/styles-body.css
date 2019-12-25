@@ -372,7 +372,7 @@ h4 {font-weight: 300;}
     width: 80%;
 
 }
-
+.social a {text-decoration: none;display: inline-block;}
 /* Connect with me on Social network */
 .social img {
     display: inline-block;
