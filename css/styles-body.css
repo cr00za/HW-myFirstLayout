@@ -374,9 +374,9 @@ h4 {font-weight: 300;}
 }
 
 /* Connect with me on Social network */
-#aboutCol2 img {
+.social img {
     display: inline-block;
-    max-width: 44px;
+    width: 44px;
     margin: 0 8px 0 0;
 }
 
